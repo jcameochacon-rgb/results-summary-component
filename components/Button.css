@@ -1,0 +1,18 @@
+.custom-button {
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.custom-button:hover {
+  /* Frontend Mentor pide que el hover sea el gradiente del fondo */
+  background: linear-gradient(to bottom, var(--bg-gradient-top), var(--bg-gradient-bottom));
+}

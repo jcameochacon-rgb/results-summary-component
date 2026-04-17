@@ -1,26 +1,60 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-bg: hsla(0, 100%, 67%, 0.1); 
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-bg: hsla(39, 100%, 56%, 0.1);
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-bg: hsla(166, 100%, 37%, 0.1);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-bg: hsla(234, 85%, 45%, 0.1);
+
+  --bg-gradient-top: hsl(252, 100%, 67%);
+  --bg-gradient-bottom: hsl(241, 81%, 54%);
+  --circle-gradient-top: hsla(256, 72%, 46%, 1);
+  --circle-gradient-bottom: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  background-color: var(--pale-blue);
+  color: var(--dark-gray-blue);
+}
+
+.card-container {
+  display: flex;
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 730px;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--pale-blue);
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    border-radius: 0;
+  }
 }
